@@ -188,3 +188,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+//TimeLine Script
+const nodes = document.querySelectorAll('.node');
+
+nodes.forEach((node) => {
+  node.addEventListener('mouseover', () => {
+    node.classList.add('active');
+  });
+
+  node.addEventListener('mouseout', () => {
+    node.classList.remove('active');
+  });
+
+  node.addEventListener('click', () => {
+    // Add your click event logic here
+  });
+});

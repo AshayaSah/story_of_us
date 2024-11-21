@@ -1,4 +1,8 @@
 @media (max-width:500px){
+    .navbar{
+        justify-content: center;
+    }
+
     .nav-links{
         display: none;
     }
@@ -17,16 +21,37 @@
           z-index: 1;
       }
 
-    .hero-content{
+      .hero-content {
         text-align: center;
+        position: relative;
+        z-index: 2;
     }
-
-    .hero-content h1{
+    
+    .hero-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(8px); /* Blurs the background */
+        z-index: -1; /* Puts the blur effect behind the text */
+    }
+    
+    .hero-content h1 {
         font-size: 2rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        margin-bottom: 10px;
     }
-    .hero-content p{
+    
+    .hero-content p {
         font-size: 1rem;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        margin-top: 0;
     }
+    
 
     /*Image Slider*/
     .slides{
@@ -54,3 +79,15 @@
         min-height: 45%;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-node .content {
+      display: block;
+    }
+    .node-image{
+      margin: 0px;
+      height: 100px;
+      width: 100px;
+    }
+  }
