@@ -1,34 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 /* General Styles */
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', 'sans-serif';
   }
   
   /* Hero Section */
   .hero {
     height: 100vh;
     width: 100%;
-    background: url('./assets/hero4.jpg') no-repeat center center/cover;
-    
+    /* background: url('./assets/hero1.jpg') no-repeat center center/cover;
+     */
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #fff;
+    color: #f7fbff;
   }
-  
-  /* Dark Overlay */
+
   .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-  }
+    inset: 0;
+    background-image: url(./assets/hero1.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url(./assets/ink3.webp);
+    mask-size: cover;
+    mask-position: center;
+}
+
+.hero::after{
+  content: '';
+  inset: 0;
+    position: absolute;
+    background:#f7fbff;
+    z-index: -2;
+}
   
   /* Navbar */
   .navbar {
@@ -42,8 +53,26 @@ body, html {
     z-index: 2; /* Above overlay */
   }
   
+  .logo {
+    width: 60px; /* Set the width of the container */
+    height: 60px; /* Set the height of the container */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 50%;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+  
   .logo img {
-    height: 50px;
+    width: 100%; /* Make the image take the full width of the container */
+    height: 100%; /* Make the image take the full height of the container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    object-position: center; /* Center the image within the container */
   }
   
   .nav-links {
@@ -55,7 +84,7 @@ body, html {
   
   .nav-links li a {
     text-decoration: none;
-    color: white;
+    color: #08306b;
     font-size: 1rem;
     transition: color 0.3s;
   }
@@ -67,9 +96,10 @@ body, html {
   /* Hero Content */
   .hero-content {
     position: relative;
+    box-sizing: border-box;
     z-index: 2; /* Above overlay */
-    padding: 0 50px;
-    max-width: 600px;
+    padding: 0 70px;
+    max-width: 500px;
 
     max-height: 500px;
     margin: auto 0px;
@@ -79,11 +109,41 @@ body, html {
   .hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 0px;
   }
   
   .hero-content p {
     font-size: 1.5rem;
     line-height: 1.5;
   }
-  
+
+/* Image Slider Section */
+.image-slider-container {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; 
+}
+
+.image-slider {
+  width: 100%;
+  height: 40%; /* Each slider takes half the height of the container */
+  overflow: hidden;
+  position: relative; /* Position relative for absolute children */
+  margin: 0; /* Reset margin if needed */
+}
+
+.slides {
+  display: flex;
+  gap: 3rem;
+  transition: transform 0.5s ease;
+  height: 100%; /* Full height of the slider */
+}
+
+.slide {
+  min-width: 100vw; /* Each slide takes full viewport width */
+  height: 100%; /* Full height */
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+}

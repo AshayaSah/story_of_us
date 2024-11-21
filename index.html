@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hero with Navbar</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Hero Section with Navbar -->
-  <section class="hero">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo-left.png" alt="Left Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero with Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hero Section with Navbar -->
+    <section class="hero">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./assets/ashaya_logo.JPG" alt="Left Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="logo">
+          <img src="./assets/sabu_logo.jpg" alt="Right Logo" />
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1>Your Fancy Heading</h1>
+        <p>Your captivating subheading goes here. Make it inspiring!</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="logo">
-        <img src="logo-right.png" alt="Right Logo">
+    </section>
+
+    <!-- Horizontal Sliding Image Section -->
+    <section class="image-slider-container">
+      <div class="image-slider">
+        <div class="slides">
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero1.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+        </div>
       </div>
-    </nav>
-    <div class="hero-content">
-      <h1>Your Fancy Heading</h1>
-      <p>Your captivating subheading goes here. Make it inspiring!</p>
-    </div>
-  </section>
-</body>
+    
+      <div class="image-slider second-slider">
+        <div class="slides">
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero1.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+          <div class="slide" style="background-image: url('./assets/hero.jpg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
