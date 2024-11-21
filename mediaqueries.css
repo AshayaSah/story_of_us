@@ -12,14 +12,16 @@
         mask-image: url(./assets/ink2.webp);
     }
 
-    .hero::after{
+    .hero::after {
         content: '';
+        position: absolute;
         inset: 0;
-          position: absolute;
-          background:#f7fbff;
-          opacity: 0.1;
-          z-index: 1;
+        background: rgba(247, 251, 255, 0.2); /* Semi-transparent background */
+        backdrop-filter: blur(1px); /* Apply blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        z-index: 1;
       }
+      
 
       .hero-content {
         text-align: center;
@@ -50,6 +52,11 @@
         color: #fff;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         margin-top: 0;
+    }
+    .hero-btn{
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
     }
     
 

@@ -121,6 +121,21 @@ body, html {
     line-height: 1.5;
   }
 
+  .hero-btn{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-btn button{
+    background-color: #08306b;
+    color: #f7fbff;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+  }
+
+
 /* Style the play button */
 .play-button {
   position: fixed; /* Fix the button to the screen */
@@ -476,4 +491,6 @@ body, html {
     justify-content: center;
   }
 }
+
+
 
