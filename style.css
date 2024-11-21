@@ -187,6 +187,7 @@ body, html {
 }
 
 .story-section-title {
+  height: 20%;
   text-align: center;
   font-size: 3rem;
   font-weight: bold; 
@@ -195,16 +196,27 @@ body, html {
 }
 
 .story-content {
+  height: 80%;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
 
   max-height:100%;
+  padding-bottom: 3rem;
 }
 
 .image-container {
   position: relative;
-  max-width: 50%; /* Half of the container */
+  min-width: 50%; /* Adjusts the width as needed */
+  height: 100%;
+  overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+.image-container img {
+  width: 100%; /* Ensures the image fills the width */
+  height: 100%; /* Ensures the image fills the height */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  display: block; /* Removes any inline spacing issues */
 }
 
 .angled-image {
@@ -223,6 +235,7 @@ body, html {
 }
 
 .note-section {
+  margin: auto;
   max-width: 50%; /* Half of the container */
   padding: 20px;
   background: white;
