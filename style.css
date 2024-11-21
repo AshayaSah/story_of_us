@@ -221,7 +221,7 @@ body, html {
 
 .angled-image {
   width: 100%;
-  /* transform: rotate(-45deg); Angle the first image */
+  transform: rotate(-45deg); 
   position: absolute; /* Position it absolutely */
   top: 0; /* Align to the top */
   left: 0; /* Align to the left */
@@ -235,6 +235,7 @@ body, html {
 }
 
 .note-section {
+  height: 90%;
   margin: auto;
   max-width: 50%; /* Half of the container */
   padding: 20px;

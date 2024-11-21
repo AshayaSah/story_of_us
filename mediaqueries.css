@@ -28,6 +28,11 @@
         font-size: 1rem;
     }
 
+    /*Image Slider*/
+    .slides{
+        gap:1rem;
+    }
+
     /*Story Section*/
     .story-section-title{
         font-size: 2rem;
