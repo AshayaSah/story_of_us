@@ -8,6 +8,15 @@
         mask-image: url(./assets/ink2.webp);
     }
 
+    .hero::after{
+        content: '';
+        inset: 0;
+          position: absolute;
+          background:#f7fbff;
+          opacity: 0.1;
+          z-index: 1;
+      }
+
     .hero-content{
         text-align: center;
     }
