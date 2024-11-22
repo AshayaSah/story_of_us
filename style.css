@@ -158,11 +158,35 @@ body, html {
 
 /* Image Slider Section */
 .image-slider-container {
+  position: relative;
   height: 100vh; /* Full viewport height */
   display: flex;
   justify-content: space-evenly;
   flex-direction: column; 
-  background-color: #f7fbff;
+  /* background-color: #f7fbff; */
+}
+
+.image-slider-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(./assets/flowerBackground.png);
+  opacity: 0.5;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  mask-image: url(./assets/ink3.webp);
+  mask-size: cover;
+  mask-position: center;
+}
+
+.image-slider-container::after{
+content: '';
+inset: 0;
+  position: absolute;
+  background:#f7fbff;
+  z-index: -2;
 }
 
 .image-slider {
@@ -186,13 +210,39 @@ body, html {
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
+
+  box-shadow:inset 2px 2px 10px #333;
 }
 
 /* Story Section Styling */
 .story-section-one{
+  position: relative;
   height: 100vh;
   box-sizing: border-box;
-  background-color: #f7fbff;
+  /* background-color: #f7fbff; */
+}
+
+.story-section-one::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(./assets/flowerThree.webp);
+  opacity: 0.3;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  mask-image: url(./assets/ink3.webp);
+  mask-size: cover;
+  mask-position: center;
+}
+
+.story-section-one::after{
+content: '';
+inset: 0;
+  position: absolute;
+  background:#f7fbff;
+  z-index: -2;
 }
 
 .story-section-container {
@@ -274,11 +324,43 @@ body, html {
 /* TimeLine Section */
 /* Timeline Section Styling */
 .timeline-section {
-  background-color: #f7fbff;
+  position: relative;
+  /* background-color: #f7fbff; */
   padding: 1rem 1rem;
 }
 
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(./assets/flowerTwo.jpg);
+  opacity: 0.3;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  mask-image: url(./assets/ink3.webp);
+  mask-size: cover;
+  mask-position: center;
+}
+
+.timeline-section::after{
+content: '';
+inset: 0;
+  position: absolute;
+  background:#f7fbff;
+  z-index: -2;
+}
+
+section h1 {
+  font-size: inherit;
+  margin-block-start: inherit;
+  margin-block-end: inherit;
+}
+
 .timeline-section-title{
+  font-size: 3rem;
+  margin: 1rem auto;
   text-align: center;
 }
 

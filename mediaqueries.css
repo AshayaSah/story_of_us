@@ -1,6 +1,7 @@
 @media (max-width:500px){
     .navbar{
         justify-content: center;
+        gap: 1rem;
     }
 
     .nav-links{
@@ -12,15 +13,15 @@
         mask-image: url(./assets/ink2.webp);
     }
 
-    .hero::after {
+    /* .hero::after {
         content: '';
         position: absolute;
         inset: 0;
-        background: rgba(247, 251, 255, 0.2); /* Semi-transparent background */
-        backdrop-filter: blur(1px); /* Apply blur effect */
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        background: rgba(241, 248, 255, 0.05); 
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(10px); 
         z-index: 1;
-      }
+      } */
       
 
       .hero-content {
@@ -36,7 +37,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        filter: blur(8px); /* Blurs the background */
+        filter: blur(1px); /* Blurs the background */
         z-index: -1; /* Puts the blur effect behind the text */
     }
     
@@ -80,10 +81,21 @@
         height: 85%;
         padding-bottom: 2rem;
     }
+    
+    .note-section{
+        text-align: center;
+    }
+    .note-section p{
+        text-align: justify;
+    }
 
     .image-container, .note-section{
         min-width: 90%;
         min-height: 45%;
+    }
+
+    .timeline-section-title{
+        font-size: 2rem;
     }
 }
 
@@ -96,5 +108,31 @@
       margin: 0px;
       height: 100px;
       width: 100px;
+    }
+
+    .footer-section{
+        margin: 0%;
+    }
+
+    .footer-section.about{
+        padding-left: 0%;
+    }
+
+    .footer-section.links{
+        display: none;
+    }
+
+    .footer-section h3{
+        font-size: 0.8rem;
+    }
+    .footer-section p{
+        font-size: 0.6rem;
+    }
+    .footer-bottom{
+        margin: 1rem;
+        padding: 0;
+    }
+    .footer-bottom p{
+        font-size: 0.6rem;
     }
   }
