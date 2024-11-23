@@ -206,3 +206,7 @@ nodes.forEach((node) => {
     // Add your click event logic here
   });
 });
+
+function showMessage() {
+  alert("I LOVE YOU DARLING MY CUTIEEPIE, MY LOVE, MY SWEETY, MY PRINCES, MY EVERYTHING! I LOVE YOU SOOO MUCH!");
+}
